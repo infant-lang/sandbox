@@ -1,4 +1,4 @@
-module github.com/tharunoptimus/playground
+module github.com/infant-lang/playground
 
 go 1.17
 
