@@ -9,6 +9,8 @@ import (
 	"github.com/rs/cors"
 )
 
+var message string =  ""
+var panicMessage string = ""
 
 
 func main() {
