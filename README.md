@@ -28,5 +28,10 @@ The JSON object should contain the following fields:
 }
 ```
 
+## Deployment
+- [Heroku](https://www.heroku.com/platform)
+
+## Build
+- `go build .`
 
 Enjoy 🎉
