@@ -2,12 +2,15 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 )
 
 type Code struct {
 	Code []string `json:"code"`
+}
+
+type Output struct {
+	Output string `json:"output"`
 }
 
 func StartSandbox(w http.ResponseWriter, r *http.Request) {
