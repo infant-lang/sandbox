@@ -1,4 +1,4 @@
-module github.com/infant-lang/playground
+module github.com/infant-lang/sandbox
 
 go 1.17
 
