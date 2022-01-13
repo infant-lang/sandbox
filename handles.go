@@ -18,6 +18,26 @@ func StartSandbox(w http.ResponseWriter, r *http.Request) {
 }
 
 func PlayHandler(w http.ResponseWriter, r *http.Request) {
+
+	defer func() {     
+		if e := recover(); e != nil {
+			
+			var output string = message + "\n" + panicMessage
+
+			outputJson, _ := json.Marshal(Output{output})
+			w.Header().Set("Content-Type", "application/json")
+			w.Write(outputJson)
+
+		} else {
+
+			var output string = message
+
+			outputJson, _ := json.Marshal(Output{output})
+			w.Header().Set("Content-Type", "application/json")
+			w.Write(outputJson)
+		}
+	}()
+
 	var code Code
 	_ = json.NewDecoder(r.Body).Decode(&code)
 
