@@ -18,9 +18,12 @@ func PlayHandler(w http.ResponseWriter, r *http.Request) {
 	var code Code
 	_ = json.NewDecoder(r.Body).Decode(&code)
 
-	// loop through the code array and print it
-	for _, line := range code.Code {
-		fmt.Println(line)
+	p := 0
+	m := 0
+
+	for lineNumber, eachline := range code.Code {
+		p, m = parse(eachline, lineNumber + 1, p, m)
 	}
+
 
 }
