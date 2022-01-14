@@ -13,9 +13,9 @@
 - `interpreter.go` is the main file for the interpreter.
 
 ## API
-- `GET /api/1.0.1/play/` - Returns `READY` to indicate that the sandbox is ready to receive the POST request. (This is used because of the cold boot times of the Dyno instances)
+- `GET /api/stable/play/` - Returns `READY` to indicate that the sandbox is ready to receive the POST request. (This is used because of the cold boot times of the Dyno instances)
 
-- `POST /api/1.0.1/play/` - The POST request should contain the code to be executed.
+- `POST /api/stable/play/` - The POST request should contain the code to be executed.
     - Body:
         - `data`: The stringified JSON object containing the code to be executed.
     - Response:

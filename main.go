@@ -22,8 +22,8 @@ func main() {
 
 
 	// Route handlers / Endpoints
-	r.HandleFunc("/api/1.0.1/play", StartSandbox).Methods("GET")
-	r.HandleFunc("/api/1.0.1/play", PlayHandler).Methods("POST")
+	r.HandleFunc("/api/stable/play", StartSandbox).Methods("GET")
+	r.HandleFunc("/api/stable/play", PlayHandler).Methods("POST")
 
 	c := cors.New(cors.Options{
         AllowedOrigins: []string{"http://localhost:3000", "http://localhost:3003", "https://infant-lang-playground.netlify.app"},
